@@ -1,0 +1,22 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://www.scene7.com/IpsApi/xsd/2014-04-03">
+   <soap:Header>
+      <ns:authHeader>
+         <ns:user>#{uid}</ns:user>
+         <ns:password>#{pwd}</ns:password>
+         <ns:appName>#{appName}</ns:appName>
+         <ns:appVersion>#{appVersion}</ns:appVersion>
+      </ns:authHeader>
+   </soap:Header>
+   <soap:Body>
+      <ns:searchAssetsByMetadataParam>
+         <ns:companyHandle>#{hCompany}</ns:companyHandle>
+         <ns:metadataConditionArray>
+          <ns:items>
+              <ns:fieldHandle>name</ns:fieldHandle>
+              <ns:op>Contains</ns:op>
+              <ns:value>#{prod}</ns:value>
+          </ns:items>
+         </ns:metadataConditionArray>
+      </ns:searchAssetsByMetadataParam>
+   </soap:Body>
+</soap:Envelope>
