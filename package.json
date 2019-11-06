@@ -1,6 +1,6 @@
 {
   "name": "septem",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API bindings for Scene7 API",
   "main": "index.js",
   "scripts": {
