@@ -22,7 +22,7 @@ module.exports = function(opts){
                 companyName: companyName
             },conf)
             //log('calling pug template with %o',parms);
-            const fn = pug.compileFile('./resources/getCompanyInfo.pug')
+            const fn = pug.compileFile(__dirname + '/resources/getCompanyInfo.pug')
             var reqxml = fn(parms);
             return api('getCompanyInfo',reqxml)
             .then(json => {

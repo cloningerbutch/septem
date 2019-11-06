@@ -14,7 +14,7 @@ module.exports = function(companyInfo){
                     hCompany: companyInfo.companyHandle
                 },conf)
                 //log('calling pug template with %o',parms);
-                const fn = pug.compileFile('./resources/getImageFormats.pug')
+                const fn = pug.compileFile(__dirname + '/resources/getImageFormats.pug')
                 var reqxml = fn(parms);
                 return api('getImageFormats',reqxml)
                 .then(imgFormats => {
@@ -40,7 +40,7 @@ module.exports = function(companyInfo){
                 prod: prod
             },conf)
             //log('calling pug template with %o',parms);
-            const fn = pug.compileFile('./resources/searchNameContains.pug')
+            const fn = pug.compileFile(__dirname + '/resources/searchNameContains.pug')
             var reqxml = fn(parms);
             //console.log(reqxml);
             const local = {};
@@ -68,7 +68,7 @@ module.exports = function(companyInfo){
                     hCompany: companyInfo.companyHandle,
                     assetHandles: handles
                 },conf)
-                const fn = pug.compileFile('./resources/getAssets.pug')
+                const fn = pug.compileFile(__dirname + '/resources/getAssets.pug')
                 var reqxml = fn(parms);
                 return api('getAssets',reqxml)
             })
