@@ -7,6 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Butch Cloninger",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloningerbutch/septem.git"
+  },
+  "keywords": [
+    "scene7",
+    "API"
+  ],
+  "homepage": "https://github.com/cloningerbutch/septem#readme",
   "license": "MIT",
   "dependencies": {
     "debug": "^4.1.1",
