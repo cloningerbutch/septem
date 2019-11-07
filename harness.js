@@ -13,8 +13,8 @@ septem.getCompany('VFDev')
 .then(imgFormats => {
     log('found %d image formats',imgFormats.length)
     console.log(imgFormats);
-    //return local.company.findAssetsNameContains('A1MF')
-    return local.company.findAssetsNameContains('detail')
+    return local.company.findAssetsNameContains('A1MF')
+    //return local.company.findAssetsNameContains('detail')
 })
 .then(assets => {
     log('found %d assets',assets.length)

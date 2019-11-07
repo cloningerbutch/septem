@@ -90,16 +90,19 @@ module.exports = function(companyInfo){
                             created: item.created[0],
                             lastModified: item.lastModified[0]
                         })
-                        var imginfo = item.imageInfo[0]
-                        curr.imageInfo = {
-                            originalPath: imginfo.originalPath[0],
-                            originalFile: imginfo.originalFile[0],
-                            width: imginfo.width[0],
-                            height: imginfo.height[0],
-                            fileSize: imginfo.fileSize[0],
-                            resolution: imginfo.resolution[0],
-                            sku: imginfo.sku[0],
-                            description: imginfo.description[0],
+                        curr.imageInfo = {};
+                        if (item.imageInfo){
+                            var imginfo = item.imageInfo[0]
+                            curr.imageInfo = {
+                                originalPath: imginfo.originalPath[0],
+                                originalFile: imginfo.originalFile[0],
+                                width: imginfo.width[0],
+                                height: imginfo.height[0],
+                                fileSize: imginfo.fileSize[0],
+                                resolution: imginfo.resolution[0],
+                                sku: imginfo.sku[0],
+                                description: imginfo.description[0],
+                            }    
                         }
                     }
                 })
